@@ -2,9 +2,34 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
 
+## Setup Angular Workspace
+
+Step 1: Create a New Angular Workspace
+
+```
+ng new my-workspace --no-create-application
+cd my-workspace
+```
+
+Step 2: Add Both Applications to the Workspace
+
+```
+ng generate application CSR
+ng generate application SSR
+```
+
+## my-workspace/
+
+  ├── …                (workspace-wide configuration files)
+  └── projects/        (applications and libraries)
+      ├── csr/      (an explicitly generated application)
+      │   └── …        (application-specific code and configuration)
+      └── ssr/      (an explicitly generated application)
+          └── …        (application-specific code and configuration)
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve CSR` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -12,7 +37,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build CSR` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
